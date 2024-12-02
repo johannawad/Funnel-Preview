@@ -11,7 +11,10 @@ interface FunnelPageProps {
 
 const FunnelPage = ({ page }: FunnelPageProps) => {
   return (
-    <div className="p-4 border-solid" style={{ backgroundColor: page.bgColor }}>
+    <div
+      className="p-4 border -solid"
+      style={{ backgroundColor: page.bgColor }}
+    >
       {page.blocks.map((block: Block) => {
         switch (block.type) {
           case "text":

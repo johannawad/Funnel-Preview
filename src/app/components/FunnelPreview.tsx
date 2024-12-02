@@ -48,7 +48,7 @@ const FunnelPreview = ({ funnel }: FunnelPreviewProps) => {
           icon={<ChevronLeftIcon className="w-5 h-5" />}
         />
         <div
-          className={`flex justify-center items-center w-[375px] border-2 rounded-md ${
+          className={`flex justify-center items-center w-[375px] border rounded-md ${
             isMobileView ? "w-[375px]" : "w-full"
           }`}
           style={{

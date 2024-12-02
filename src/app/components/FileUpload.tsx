@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Funnel } from "../types/funnel";
+import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
 
 interface FileUploadProps {
   onUpload: (data: Funnel) => void;
@@ -29,16 +30,23 @@ export const FileUpload = ({ onUpload }: FileUploadProps) => {
   };
 
   return (
-    <div className="flex-2">
-      <label className="mb-2 text-sm font-medium text-gray-800">
-        Upload your funnel(.json) file
+    <div className="flex flex-col items-end">
+      <label
+        htmlFor="file-upload"
+        className="flex items-center justify-center px-4 py-2 border border-gray-500 rounded-lg text-sm font-medium text-gray-500 bg-white hover:border-blue-500 hover:text-blue-500 cursor-pointer "
+      >
+        <span className="p-1">
+          <ArrowUpTrayIcon className="w-5 h-5" />
+        </span>
+        Upload Funnel File (.json)
       </label>
       <input
+        id="file-upload"
         type="file"
         accept="application/json"
         onChange={handleFileChange}
+        className="hidden"
         required
-        className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none "
       />
 
       {error && <div className="text-red-500 mt-2">{error}</div>}

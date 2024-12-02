@@ -35,7 +35,7 @@ const BlockRenderer: React.FC<BlockRendererProps> = ({ block }) => {
               <img src={item.src} alt={item.title} className="w-8 h-8" />
               <div>
                 <p className="font-semibold">{item.title}</p>
-                <p className="text-sm text-gray-500">{item.description}</p>
+                <p className="text-sm">{item.description}</p>
               </div>
             </li>
           ))}
