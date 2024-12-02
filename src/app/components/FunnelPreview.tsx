@@ -32,7 +32,8 @@ const FunnelPreview = ({ funnel }: FunnelPreviewProps) => {
 
   return (
     <div className="items-center justify-center w-[1080px] ">
-      <div className="flex justify-end mb-4">
+      <div className="flex items-center justify-between pb-3">
+        <p className="font-semibold text-gray-600">{title}</p>
         <button
           onClick={() => setIsMobileView(!isMobileView)}
           className="px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-md hover:bg-gray-500"
@@ -48,19 +49,11 @@ const FunnelPreview = ({ funnel }: FunnelPreviewProps) => {
           icon={<ChevronLeftIcon className="w-5 h-5" />}
         />
         <div
-          className={`flex justify-center items-center w-[375px] border rounded-md ${
+          className={`flex justify-center items-center w-[375px] border-2 rounded-md ${
             isMobileView ? "w-[375px]" : "w-full"
           }`}
-          style={{
-            border: "1px solid #e5e7eb",
-          }}
         >
-          <div className="p-4 w-full h-full">
-            <div className="flex items-center justify-between px-4 py-3 bg-gray-100">
-              <p className="font-semibold text-gray-600">{title}</p>
-            </div>
-            <FunnelPage page={currentPage} />
-          </div>
+          <FunnelPage page={currentPage} />
         </div>
 
         <IconButton

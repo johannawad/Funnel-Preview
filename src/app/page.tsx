@@ -27,7 +27,7 @@ const Page = () => {
           <FileUpload onUpload={handleFileChange} />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center border m-2 p-2">
+      <div className="flex flex-col items-center justify-center border rounded-md m-2 p-2">
         {funnelData ? (
           <FunnelPreview funnel={funnelData} />
         ) : (
