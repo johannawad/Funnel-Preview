@@ -39,7 +39,7 @@ const Page = () => {
                 <DevicePhoneMobileIcon className="w-10 h-10" />
               </span>
               <p className="text-center text-gray-400">
-                Upload your funnel file to see the preview.
+                Upload your funnel to see the preview.
               </p>
             </div>
           </div>
